@@ -1,0 +1,11 @@
+python-devel
+python-pip
+gcc
+vim
+git
+thunderbird
+pidgin
+awesome
+postgresql-server
+postgresql
+stardict-dic-zh_CN
