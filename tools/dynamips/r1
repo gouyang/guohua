@@ -1,0 +1,3 @@
+#!/bin/bash
+pushd /root/dynamips/files
+/usr/local/bin/dynamips-0.2.8-RC2-amd64.bin -i 0 --idle-pc=0x605a151c -c 0x2142 -t npe-400 -b bridge_conf.txt -p 0:C7200-IO-FE -s 0:0:udp:10011:127.0.0.1:10001 -p 1:PA-4T+ -s 1:1:udp:10102:127.0.0.1:10201 -s 1:2:udp:10107:127.0.0.1:10701 /root/dynamips/ios/c7200-adventerprisek9.124-9.T.bin

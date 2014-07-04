@@ -1,0 +1,3 @@
+#!/bin/bash
+pushd /root/dynamips/files
+/usr/local/bin/dynamips-0.2.8-RC2-amd64.bin -i 4 --idle-pc=0x603dbda0 -c 0x2142 -t npe-400 -p 0:C7200-IO-FE -s 0:0:udp:10015:127.0.0.1:10005 -p 1:PA-4T+ -s 1:0:udp:10504:127.0.0.1:10405 -s 1:1:udp:10506:127.0.0.1:10605 -s 1:2:udp:10507:127.0.0.1:10705 /root/dynamips/ios/c7200-adventerprisek9.124-9.T.bin

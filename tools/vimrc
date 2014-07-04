@@ -1,0 +1,150 @@
+set history=700
+set hidden
+set incsearch ignorecase hlsearch
+"set shiftwidth=4 softtabstop=4 tabstop=8 expandtab smarttab
+"look under .vim/ftplugin
+set autochdir
+set encoding=utf8
+set noswapfile
+set winwidth=80
+set background=dark
+set fillchars=vert:\ ,stl:\ ,stlnc:\
+set wildignore=*.o,*.pyc
+set tags=./tags,tags;$HOME
+set laststatus=2
+set viminfo=
+set fileformats=unix,dos,mac
+set scrolloff=10
+set mouse=a
+"colorscheme blackboard
+filetype plugin on
+filetype indent off
+syntax enable
+"auto source vimrc
+autocmd! bufwritepost vimrc source ~/.vimrc
+
+"source autotag.vim, use ctags
+"so ~/git/dotFiles/vim/plugin/autotag.vim
+
+let g:mapleader = ","
+nnoremap 0 ^
+nnoremap ; :
+nnoremap : ;
+nnoremap j gj
+nnoremap k gk
+nnoremap 0 g0
+nnoremap $ g$
+noremap <leader>w :wq!<cr>
+noremap <leader>q :q!<cr>
+noremap <leader>n :set nu!<cr>
+noremap <leader>d d$<cr>
+noremap <c-a> <esc>:w <cr>
+noremap <c-a> <esc>:w <cr>
+noremap <silent> <Space> :silent noh<Bar>echo<CR>
+nnoremap <c-d> <esc>ddo
+inoremap <c-d> <esc>ddo
+nnoremap <c-d> <esc>ddo
+inoremap <c-d> <esc>ddo
+noremap <leader>v :vsplit
+noremap <leader>s :split<cr>
+noremap <leader>ev :vsplit $MYVIMRC<cr>
+noremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>a <Esc>:Ag!
+"call ,cd to change to current dir
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+"toggle and close nerdtree
+nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>c :NERDTreeClose<CR>
+
+"keymap for buffer
+noremap <leader>bb :ls<CR>:buffer<Space>
+noremap <leader>bn :bn<cr>
+noremap <leader>bp :bp<cr>
+"keymap for window
+noremap <c-h> :vertical res -5<cr>
+noremap <c-j> :res -5<cr>
+noremap <c-k> :res +5<cr>
+noremap <c-l> :vertical res +5<cr>
+noremap <leader>h :wincmd h<cr>
+noremap <leader>j :wincmd j<cr>
+noremap <leader>k :wincmd k<cr>
+noremap <leader>l :wincmd l<cr>
+"keymap for tab
+noremap <leader>te :tabnew<cr>
+noremap <leader>tp :tabprevious<cr>
+noremap <leader>tn :tabnext<cr>
+noremap <leader>tc :tabclose<cr>
+noremap <leader>tm :tabmove
+
+nnoremap <silent> <F9> :TagbarToggle<CR>
+
+"set vim plugins
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+"let Vundle manage Vundle
+"required!
+Bundle 'gmarik/vundle'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+"Bundle 'sotte/presenting.vim'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'ervandew/supertab'
+Bundle 'nvie/vim-flake8'
+"Bundle 'tpope/vim-fugitive'
+"Bundle 'Lokaltog/vim-easymotion'
+"sparkup to write html easy
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+"Bundle 'wincent/Command-T'
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Bundle 'sjbach/lusty'
+"Bundle 'vim-scripts/UltiSnips'
+"Bundle 'MarcWeber/ultisnips'
+Bundle 'majutsushi/tagbar'
+Bundle 'rking/ag.vim'
+"Bundle 'fatih/vim-go'
+Bundle 'Rykka/riv.vim' 
+filetype plugin indent on
+
+let g:SuperTabDefaultCompletionType = "context"
+
+"au add header for python script
+"au BufNewFile *.py 0r ~/.vim/pyheader 
+au BufNewFile *.py :call Pyheader()
+au BufNewFile *.c :call Cheader()
+
+function! Browser ()
+    let line = getline (".")
+    let line = matchstr (line, "http[^   ]*")
+    exec "!firefox ".line
+endfunction""
+map <Leader>f :call Browser ()<CR>
+
+"------ Filetypes ------"
+" Vimscript
+autocmd FileType vim setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
+
+" Shell
+autocmd FileType sh setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
+
+" Ruby
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+
+" PHP
+autocmd FileType php setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+
+" X?HTML & XML
+autocmd FileType html,xhtml,xml setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+
+" CSS
+autocmd FileType css setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+
+" JavaScript
+" autocmd BufRead,BufNewFile *.json setfiletype javascript
+autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+
+let javascript_enable_domhtmlcss=1
+
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1

@@ -1,0 +1,20 @@
+# Connection to instance "I0"
+I0:udp:10001:127.0.0.1:10011
+
+# Connection to instance "I1"
+I1:udp:10002:127.0.0.1:10012
+
+# Connection to instance "I2"
+I2:udp:10003:127.0.0.1:10013
+
+# Connection to instance "I3"
+I3:udp:10004:127.0.0.1:10014
+
+# Connection to instance "I4"
+I4:udp:10005:127.0.0.1:10015
+
+# Connection to instance "I5"
+I5:udp:10006:127.0.0.1:10016
+
+# Connection to instance "I6"
+I6:udp:10007:127.0.0.1:10017

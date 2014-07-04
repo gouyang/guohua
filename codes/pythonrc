@@ -1,0 +1,49 @@
+# -*- mode: python -*-
+
+import sys, os, subprocess
+try:
+    import readline
+    import rlcompleter
+    import atexit
+    readline.parse_and_bind("tab: complete")
+    atexit.register(readline.write_history_file,
+                    os.path.expanduser('~/.python_history'))
+except ImportError:
+    pass
+
+_pow = pow
+from math import *
+pow = _pow; del _pow
+
+try:
+    import io
+    from io import StringIO, BytesIO
+except ImportError:
+    pass
+
+from collections import defaultdict
+
+import time
+
+def timed(func):
+    import functools
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        res = func(*args, **kwargs)
+        end = time.time()
+        print("%s time: %.5f" % (func.__name__, end - start))
+        return res
+    return wrapper
+
+def reimport(mod, locals=None):
+    if isinstance(mod, str):
+        modname = mod
+    else:
+        modname = mod.__name__
+    sys.modules[modname] = None
+    del sys.modules[modname]
+    new_mod = __import__(modname)
+    if locals is not None:
+        locals[modname] = new_mod
+    return new_mod

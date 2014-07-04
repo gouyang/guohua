@@ -1,0 +1,269 @@
+#!/usr/bin/env pinpoint
+
+[p2.jpg]
+[fill]
+[font=Sans 100px]
+[text-color=deepskyblue]
+[duration=5.000000]
+
+--- [vv.flv][top-right][text-color=black] 
+Welcome to VIM
+
+
+-- [p1.jpg] [transition=text-slide-up] [top-left]
+Out of all the open software i've ever seen and used, and i've seen a lot, Vim
+is the best, most useful and highest quality to work with, second only to the
+linux kernel itself.  (Peter Jay Salzman)
+
+
+-- [p2.jpg]  [transition=text-slide-up][bottom]
+Vi is like a Ferrari, if you're a beginner, it handles like a bitch, but once
+you get the hang of it, it's small, powerful and FAST! (Unknown)
+VIM is like a new model Ferrari, and sounds like one too - "VIIIIIIMMM!"
+(Stephen Riehm, Germany)
+
+
+-- [p3.jpg]  [transition=text-slide-up][bottom] 
+A previous girlfriend of mine switched to emacs.  Needless to say, the
+relationship went nowhere.  (Geoffrey Mann)
+
+
+I luv VIM.  It is incredible.  I am naming my first-born Vimberly.  (Jose
+Unpingco, USA)
+
+
+-- [p4.jpg]  [transition=text-slide-up] [bottom]
+Thanks very much for writing what in my opinion is the finest text editor on
+the planet.  If I were to get another cat, I would name it "Vim".
+(Bob Sheehan, USA)
+
+
+-- [p5.jpg]  [transition=text-slide-up][top-left]
+To tell the truth sometimes I used elvis, vile, xvi, calvin, etc.  And this is
+the reason that I can state that VIM is the best! (Ferenc Deak, Hungary)
+
+
+I am a user of VIM and I love it.  I use it to do all my programming, C,
+C++, HTML what ever.  (Tim Allwine)
+
+
+-- [p6.jpg]  [transition=text-slide-up][top-left]
+VIM is the greatest editor since the stone chisel.  (Jose Unpingco, USA)
+
+
+I should mention that VIM is a very good editor and can compete with anything
+(Ilya Beloozerov).
+
+
+-- [p7.jpg]  [transition=text-slide-up] [top-left]
+I use VIM since version 3.0.  Since that time, it is the ONLY editor I use,
+with Solaris, Linux and OS/2 Warp.  I suggest all my friends to use VIM, they
+try, and they continue using it.  VIM is really the best software I have ever
+uploaded from the Internet, and the best editor I know of.  (Marco
+Eccettuato, Italy)
+
+
+--  [transition=text-slide-up]
+ Agenda
+
+ - Introduction
+ - Warmup with vimtutor
+ - Buffers, Windows, Tabs
+ - Marks, Registers, Abbreviations, Macros
+ - Tags, Folding
+ - Misc
+ - Vimrc manipulate
+ - VIM as a Python IDE
+
+
+--  [transition=text-slide-up] 
+  Introduction
+
+ - Not just an editor
+ - Can be an IDE
+ - Countless feature
+ - You wish for a feature? it is there
+
+    "The tool that save the most labor in a programming project 
+ is probably a text-editing system"  [The Mythical Man-Month]
+
+
+--  [transition=text-slide-up] 
+  Warmup with vimturor
+
+
+-- [transition=text-slide-up]
+  Buffers
+
+ - :edit filename
+ - :ls or :buffers
+ - :buffer N
+ - :bprevious
+ - :bNext
+ - :bdelete  
+ - :bwipeout 
+ - :b! N  
+ 
+ - :help buffers
+
+
+-- [transition=text-slide-up] 
+ Buffer flags
+
+  - inactive buffer 
+  h hidden buffer
+  % current buffer
+  # alternate buffer
+  + modified buffer
+
+ - :help buffers
+
+
+-- [transition=text-slide-up]
+ Windows
+
+ - :split or c-w s
+ - :vsplit or c-w v
+ - :new or c-w s
+ - :vnew or c-w v 
+
+ - navigation: c-w + (h, j, k, l) c-w w/W, c-w c-w
+ - resize: c-w +-
+ - :sball
+ - :vert sball
+
+ - :help windows
+
+
+-- [transition=text-slide-up]
+ Tabs
+
+ - :tabedit 
+ - :tabnew
+ - :tabprevious
+ - :tabNext
+ - :tabmove
+ - :tabclose
+ - :tabs
+ 
+ - :help tabpage
+
+
+--  [transition=text-slide-up] 
+  Marks
+ 
+ m{a-zA-Z}
+ 'a  #go to the line
+ `a  #go to the cursor
+ 
+ - :help mark-motions
+
+
+--  [transition=text-slide-up] 
+  Registers
+ 
+ "[a-zA-Z0-9_-:.%#=*+~/ ]
+ - :reg
+ reg action
+ reg paste
+ 
+ - :help registers
+
+
+--  [transition=text-slide-up] 
+  Keyboard Mappings
+ 
+ map can be used for:
+     - changing the meaning of typed keys
+     - execute a function on certain keystrokes
+ 
+ map with modes
+     - nmap, imap, vmap, cmap, omap
+
+ forms:
+     - map
+     - noremap: avoid recursion
+     - unmap
+
+ examples:  :map c-w :wq!cr
+
+ - :help mapping
+
+
+--  [transition=text-slide-up] 
+  Abbreviations
+ 
+ examples:
+ - :ab im import
+ - :ab #i #include
+ - :iab gouyang@  gouyang@redhat.com #insert mode
+ 
+ - :help ab
+ 
+
+--  [transition=text-slide-up] 
+  Tags
+ 
+ - ctags -R
+ - :set tags=tagfile
+ - jump: CTRL + ]
+ - back: CTRL + t
+ - :tag  :ptag
+ - c-w }
+ - c-w z
+ 
+ - :help tags
+ - :help preview-window
+
+ 
+--  [transition=spin-text] 
+  Macros
+ 
+ - qchar       #start recording into register char
+ - q             #stop recording
+ - @char       #replay
+ - @@            #repeat last recording
+ 
+ - :help record
+
+
+--  [transition=spin-text] 
+  Folds
+
+ - zf
+ - zc
+ - zo
+ 
+ - foldmethod, foldlevel
+
+ - :help Folding
+ 
+
+--  [transition=spin-text] 
+  Misc
+ - mouse: set mouse=a/n/v/i
+ - sessions: mksession, wviminfo, rviminfo
+ - digraphs: c-k char
+ - Repeating: .  @:
+ - :!cmd
+ - encrypt: vim -x
+ - Vimdiff
+ - others: J, gf, c-a, c-x
+ 
+
+--  [transition=spin-text] 
+  Vimrc manupilate
+
+
+--  [transition=spin-text] 
+  VIM as a Python IDE
+ 
+ - vundle: VIM plugins manager  #git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+ - Syntax check: flake / Map F7
+ - Program execute: Map F5
+ - Buffer and filesystem explorer: lusty explorer, lusty juggler
+ - Autocomplete:  supertab / jedi
+ - List tags: tagbar
+ - Automatic add header
+ - Git integration:  fugitive
+ - Using ag instead of !grep
