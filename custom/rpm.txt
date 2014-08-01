@@ -9,3 +9,6 @@ awesome
 postgresql-server
 postgresql
 stardict-dic-zh_CN
+npm
+npm install -g hicat
+

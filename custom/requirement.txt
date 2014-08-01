@@ -1,2 +1,6 @@
 virtualenvwrapper
 yolk
+jedi
+sphinx
+hieroglyph
+rst2slides
