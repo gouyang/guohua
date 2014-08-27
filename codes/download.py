@@ -1,10 +1,16 @@
-#!/usr/bin/python
-"""Download from a page with specified suffix"""
+#!/usr/bin/env python
+"""
+    Download all files from a page with specify suffix
+    Usage:
+        ./download.py -u http://xxxx.com/page -s pdf
+"""
 
+import urllib
 import urllib2
 import subprocess as sp
 import argparse
 from HTMLParser import HTMLParser
+from multiprocessing import Process
 
 
 class MyHTMLParser(HTMLParser):
@@ -22,8 +28,13 @@ def parse_options():
     parser = argparse.ArgumentParser()
     parser.add_argument("-u", "--url", help="url of the resource")
     parser.add_argument("-s", "--suffix", help="target's suffix")
-    args = parser.parse_args()
-    return args
+    _args = parser.parse_args()
+    return _args
+
+
+def worker(src, des):
+    urllib.urlretrieve(src, des)
+
 
 def retrieve(url, suffix):
     if url.startswith('http'):
@@ -35,9 +46,13 @@ def retrieve(url, suffix):
             parser.feed(f.read())
             f.close()
             parser.close()
+            jobs = []
             for p in parser.urls:
                 if p.endswith(suffix):
-                    sp.call(['wget', url + p])
+                    process = Process(target=worker, args=(url+p, p))
+                    jobs.append(process)
+                    process.start()
+                    #sp.call(['wget', url + p])
     elif url.startswith('ftp'):
         f = urllib2.urlopen(url).read()
         for line in f.split('\n'):
@@ -49,6 +64,6 @@ def retrieve(url, suffix):
 
 if __name__ == "__main__":
     args = parse_options()
-    url = args.url
-    suffix = args.suffix.split(',')
-    retrieve(url, tuple(suffix))
+    download_url = args.url
+    download_suffix = args.suffix.split(',')
+    retrieve(download_url, tuple(download_suffix))
