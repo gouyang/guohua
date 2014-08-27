@@ -85,3 +85,12 @@ codes
 1. download_ script to download files simultaneously
 
 .. _download: /codes/download.py
+
+slides
+------
+
+- Python slides
+
+  * `pycon 2013`_
+    
+.. _pycon 2013: https://speakerdeck.com/pyconslides/
