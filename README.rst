@@ -30,6 +30,25 @@ tools
 
 .. _hicat: https://github.com/rstacruz/hicat
 
+- Presentation tools
+
+  * hieroglyph_
+  * rst2slides
+  * rst2s5
+  * pinpoint_
+
+  .. _hieroglyph: https://github.com/nyergler/hieroglyph
+  .. _rst2slides: https://bitbucket.org/tin_nqn/rst2slides
+  .. _pinpoint: https://github.com/GNOME/pinpoint
+
+- github replacement
+
+  * gitlab_
+  * gitbucket_
+
+  .. _gitlab: https://about.gitlab.com/
+  .. _gitbucket: https://github.com/takezoe/gitbucket
+
 git tips
 --------
 
