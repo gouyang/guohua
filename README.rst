@@ -82,4 +82,6 @@ python tips
 codes
 -----
 
-1. download script to download files simultaneously
+1. download_ script to download files simultaneously
+
+.. _download: /codes/download.py
