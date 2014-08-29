@@ -18,9 +18,15 @@ Editor
 
   * vundle_
   * nerdtree_
+  * syntastic_
+  * jedi_
+  * supertab_
 
 .. _vundle: https://github.com/gmarik/Vundle.vim.git
 .. _nerdtree: https://github.com/scrooloose/nerdtree.git
+.. _syntastic: https://github.com/scrooloose/syntastic
+.. _jedi: https://github.com/davidhalter/jedi-vim
+.. _supertab: https://github.com/ervandew/supertab
 
 
 tools
@@ -33,12 +39,13 @@ tools
 - Presentation tools
 
   * hieroglyph_
-  * rst2slides
-  * rst2s5
+  * rst2slides_
+  * rst2s5_
   * pinpoint_
 
   .. _hieroglyph: https://github.com/nyergler/hieroglyph
   .. _rst2slides: https://bitbucket.org/tin_nqn/rst2slides
+  .. _rst2s5: http://docutils.sourceforge.net/docs/user/slide-shows.html
   .. _pinpoint: https://github.com/GNOME/pinpoint
 
 - github replacement
@@ -79,6 +86,13 @@ python tips
 
    .. Note:: Please install jedi firstly
 
+nodejs
+------
+
+- bower_ package management
+
+  .. _bower: https://github.com/bower/bower
+
 codes
 -----
 
@@ -86,8 +100,8 @@ codes
 
 .. _download: /codes/download.py
 
-slides
-------
+slides collection
+-----------------
 
 - Python slides
 
