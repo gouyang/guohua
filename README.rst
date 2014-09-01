@@ -89,8 +89,9 @@ codes
 slides
 ------
 
-- Python slides
-
-  * `pycon 2013`_
+- `pycon 2013`_
+- `linuxcon 2014`_
     
 .. _pycon 2013: https://speakerdeck.com/pyconslides/
+.. _linuxcon 2014:
+   http://events.linuxfoundation.org/events/linuxcon-north-america/program/slides
