@@ -1,6 +1,12 @@
 .. load-style:: big-centered
 
+.. style:: 
+    :align: center 
+    :font_size: 48
+
 **Linux basics**
+
+**to make your life easy**
 
 ----
 
@@ -24,10 +30,6 @@ separating /boot for mutiple systems
 
 ----
 
-make your life easy
-
-----
-
 Export 
 
 ----
@@ -43,6 +45,10 @@ Alias
 .bash_aliases
 
 ----
+
+.. style:: 
+    :align: left
+    :font_size: 40
 
 # Quick access
 
@@ -68,6 +74,10 @@ Alias
 - alias rhevh="ssh 10.66.11.225 -l root"
 
 ----
+
+.. style:: 
+    :align: center 
+    :font_size: 48
 
 git alias
 
@@ -125,7 +135,7 @@ yum update -y
 
 ----
 
-Language packages - Python,nodejs
+Language packages - Python,Nodejs,Go
 
 ----
 
@@ -134,6 +144,10 @@ pip install -U `yolk -U | awk '{print $1}' | uniq`
 ----
 
 npm-check-updates -g
+
+----
+
+go get -u all
 
 ----
 
