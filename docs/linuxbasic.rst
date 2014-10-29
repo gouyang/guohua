@@ -6,7 +6,7 @@
 
 **Linux basics**
 
-**to make your life easy**
+**to make the life easy**
 
 ----
 
@@ -34,7 +34,8 @@ Export
 
 ----
 
-PATH="$HOME/bin:$PATH"
+- PATH="$HOME/bin:$PATH"
+- PATH="$APPPATH/bin:$PATH"
 
 ----
 
@@ -49,6 +50,10 @@ Alias
 .. style:: 
     :align: left
     :font_size: 40
+# make sudo works as expect
+alias sudo='sudo '
+
+----
 
 # Quick access
 
@@ -70,8 +75,8 @@ Alias
 
 # Puppet
 
-- alias docker="ssh 10.66.9.220 -l root"
-- alias rhevh="ssh 10.66.11.225 -l root"
+- alias mybox1="ssh 192.168.1.10 -l root"
+- alias mybox2="ssh 192.168.1.20 -l root"
 
 ----
 
@@ -83,11 +88,8 @@ git alias
 
 ----
 
-.gitconfig for global
-
-----
-
-.git/config for local
+- .gitconfig for global
+- .git/config for local
 
 ----
 
@@ -143,11 +145,13 @@ pip install -U `yolk -U | awk '{print $1}' | uniq`
 
 ----
 
-npm-check-updates -g
+- npm update -g single-pkg
+- npm-check-updates -g
 
 ----
 
-go get -u all
+- go get -u single-pkg
+- go get -u all
 
 ----
 
