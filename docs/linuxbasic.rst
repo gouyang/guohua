@@ -93,6 +93,16 @@ git alias
 
 ----
 
+.ssh/config 600
+
+----
+
+Host webserver.example.com
+    Port 8080
+    User root
+
+----
+
 Package Management
 
 ----
