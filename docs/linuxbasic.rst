@@ -97,7 +97,8 @@ git alias
 
 ----
 
-Host webserver.example.com
+Host gitlab
+    HostName gitlab.example.com
     Port 8080
     User root
 
@@ -127,6 +128,10 @@ rpm2cpio xxx.rpm | cpio -ivd
 
 ----
 
+RPM Fusion
+
+----
+
 yum
 
 ----
@@ -144,6 +149,10 @@ yum provides
 ----
 
 yum update -y
+
+----
+
+assumeyes=1  /etc/yum.conf
 
 ----
 
