@@ -15,19 +15,9 @@ Overview
 ========
 
 Over 10 years of professional experience in software testing. Excellent in
-problem solving. Experienced in system and network management, Python and bash
-programming, markup language reStructuredText. Extensive experience with 
-web development, autotest framework.
-
-*About Me*
-----------
-
-- Quality engineer with 10 years experience
-- Python lover
-- Love geek humor, music, insight blogs, and open source software
-- Graduated from Whu university in 2014
-- RHCE, CCNA & CCNP
-- Live in ChangPing(BJ) with my wife and my little girl
+problem solving. Experienced in Linux system and network management.
+Experienced in Python, Golang, Shell programming, markdown and rst.
+Experienced in HTML, CSS, Bootstrap.
 
 *Skills*
 --------
@@ -35,8 +25,11 @@ web development, autotest framework.
 - Linux: Fedora, RHEL, Gentoo, Arch, Debian, Kali, Ubuntu
 - Virtualization: Docker, oVirt/Rhev, vSphere
 - Network: CCNA & CCNP, TCP/IP
-- Programming language: Python, Bash, CSS, HTML
-- Tools: git, vim, sphinx, autotest
+- Programming language: Python, Golang, Bash, CSS, HTML
+- Framework: Django, Bootstrap, autotest,
+  Goblog_ (write from scratch bymyself)
+- Tools: git, vim, sphinx, 
+- Certificates: RHCE, CCNA
 
 ~~~~
 
@@ -64,9 +57,9 @@ Experience
 
   Now on Docker
 
-  + Execute manual testing for docker cli, atomic host, geard and kubernetes.
-  + Contributed to docker-autotest on github
-  + Document and man page review
+  + Execute manual testing for docker, atomic and kubernetes.
+  + Contributing to docker-autotest on github
+  + Review document before publish it.
   + Deploy server by docker: Apache, gitlab
   + Initialize the project to write team documents site by Docutils/reStructuredText
 
@@ -76,7 +69,9 @@ Experience
   + Redhat Volunteer at FUDCon Beijing 2014  
   + OSTC 2014
   + Presentations: oVirt overview, Docker overview, RHEL7 overview, VIM as
-    the Python IDE, Virtualenv
+    the Python IDE, Virtualenv, Linux tips(to make the life easy)
+
+~~~~
 
 - 2009 - 2012 QE at VMware
 
@@ -88,6 +83,8 @@ Experience
   + Execute test cases and report bugs. 
   + Setup vSphere environment for daily testing and keep updating them.
   + Maintain RSA Server to issue token for smartcard.  
+
+~~~~
 
 - 2006 - 2009 QE leader at Symbio
 
@@ -107,6 +104,8 @@ Experience
   + Help review docs and bugs.
   + Generate statictis data for analysis.
 
+~~~~
+
 - 2004 - 2006 QE at Ensemble
 
   I18N and L10N testing for IBM Domino Notes and FVT testing for symantec
@@ -114,9 +113,21 @@ Experience
 
 ~~~~
 
+*About Me*
+----------
+
+- Quality engineer with 10 years experience
+- Python and Golang lover
+- Love geek humor, music, tech blogs, and open source software
+- Live in ChangPing(BJ) with my wife and my little girl
+
+
 Philosophy
 ==========
 - Stay peace and calm
 - The quieter you become, the more you are able to hear
-- There are many ways to do it, but you should find the best way for you
-- Low carbon and no noise
+- There is more than one way to achieve it, go to find your way.
+- Low carbon and make no noise
+
+
+.. _goblog: https://github.com/ouyanggh/goblog
