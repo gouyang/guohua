@@ -27,8 +27,8 @@ Experienced in HTML, CSS, Bootstrap.
 - Network: CCNA & CCNP, TCP/IP
 - Programming language: Python, Golang, Bash, CSS, HTML
 - Framework: Django, Bootstrap, autotest,
-  Goblog_ (write from scratch bymyself)
-- Tools: git, vim, sphinx, 
+  Goblog_ (write from scratch by myself)
+- Tools: git, vim, sphinx, ansible
 - Certificates: RHCE, CCNA
 
 ~~~~
