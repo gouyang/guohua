@@ -1,7 +1,10 @@
 #!/bin/bash
 
-name=fedora-cloud
+dir=$(basename $(pwd))
+name=${dir-fedora-cloud}
 iso=$name-cidata.iso
+image=${image-yourimg}
+ext=${image##*.}
 
 # create meta-data file
 echo -e "instance-id: fedora-cloud0\nlocal-hostname: fedora-cloud-00" > meta-data
@@ -18,11 +21,15 @@ scp $iso /var/lib/libvirt/boot/$iso
 
 
 # - copy down RHEL Atomic image
-#wget http://download.fedoraproject.org/pub/fedora/linux/releases/21/Cloud/Images/x86_64/Fedora-Cloud-Base-20141203-21.x86_64.raw.xz
+# wget http://download.fedoraproject.org/pub/fedora/linux/releases/21/Cloud/Images/x86_64/Fedora-Cloud-Base-20141203-21.x86_64.raw.xz
 
-# - decompress image
-echo "- decompressing image may take a while"
-xz -d /var/lib/libvirt/images/Fedora-Cloud-Base-20141203-21.x86_64.raw.xz
-cp Fedora-Cloud-Base-20141203-21.x86_64.raw /var/lib/libvirt/images/
+# - decompress image if needed
+# echo "- decompressing image may take a while"
+# xz -d /var/lib/libvirt/images/Fedora-Cloud-Base-20141203-21.x86_64.raw.xz
+
+# copy image to libvirt images directory
+
+#cp Fedora-Cloud-Base-20141203-21.x86_64.raw /var/lib/libvirt/images/
+cp $image /var/lib/libvirt/images/$name.$ext
 
 exit

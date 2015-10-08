@@ -10,10 +10,11 @@ iso=$iso
 
 virsh destroy $name
 virsh undefine $name
-virsh vol-delete --pool default /var/lib/libvirt/images/Fedora-Cloud-Base-20141203-21.x86_64.raw
+virsh vol-delete --pool default /var/lib/libvirt/images/$name*
 virsh pool-refresh default
 
 rm -f $iso meta-data user-data
+rm -f /var/lib/libvirt/images/$name*
 
 exit
 
