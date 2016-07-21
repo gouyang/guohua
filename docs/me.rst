@@ -7,13 +7,16 @@ Basic info
 
 - mobile: 13522032627
 - email: ouyanggh0815@gmail.com
-- github: https://github.com/ouyanggh
+- location: BeiJing, China
+- github: https://github.com/gouyang
 
 ~~~~
 
 Overview
 ========
 
+Senior software testing engineer in RedHat, work with a global team to test 
+container techlogies products like Atomic project, docker, kubernetes. 
 Over 10 years of professional experience in software testing. Excellent in
 problem solving. Experienced in Linux system and network management.
 Experienced in Python, Golang, Shell programming, markdown and rst.
@@ -120,14 +123,6 @@ Experience
 - Python and Golang lover
 - Love geek humor, music, tech blogs, and open source software
 - Live in ChangPing(BJ) with my wife and my little girl
-
-
-Philosophy
-==========
-- Stay peace and calm
-- The quieter you become, the more you are able to hear
-- There is more than one way to achieve it, go to find your way.
-- Low carbon and make no noise
 
 
 .. _goblog: https://github.com/ouyanggh/goblog
