@@ -1,0 +1,56 @@
+function FindProxyForURL(url, host) {
+
+url = url.toLowerCase();
+host = host.toLowerCase();
+
+var proxy_yes = "PROXY squid.abc.com:3128; PROXY squid.xyz.com:3128";
+var proxy_no = "DIRECT";
+
+// If the hostname matches, send direct.
+    if (dnsDomainIs(host, ".google.com") ||
+        shExpMatch(host, "(*.google*|google.com)") || 
+        shExpMatch(host, "(*.*google*.com|google.com)") || 
+        shExpMatch(host, "(*.googleapis.com|googleapis.com)") || 
+        shExpMatch(host, "(*.stackoverflow.com|stackoverflow.com)") || 
+        shExpMatch(host, "(*.youtube.com|youtube.com)") || 
+        shExpMatch(host, "(*.sstatic.net|sstatic.net)") || 
+        shExpMatch(host, "(*.*static*|static*)") || 
+        shExpMatch(host, "(*.schema.org|schema.org)") || 
+        shExpMatch(host, "(*.golang.org|golang.org)") || 
+        shExpMatch(host, "(*.twitch.tv|twitch.tv)") || 
+        shExpMatch(host, "(*.hltv.org|hltv.org)") || 
+        shExpMatch(host, "(*.medium.com|medium.com)") || 
+        shExpMatch(host, "(*.godoc.org|godoc.org)") || 
+        shExpMatch(host, "(*.gstatic.com|gstatic.com)") || 
+        shExpMatch(host, "(*.ytimg.com|ytimg.com)") || 
+        shExpMatch(host, "(*.twimg.com|twimg.com)") ||
+        shExpMatch(host, "(*.blogspot.com|blogspot.com)") ||
+        shExpMatch(host, "(*.dropbox.com|dropbox.com)") ||
+        shExpMatch(host, "(*.facebook.com|facebook.com)") || 
+        shExpMatch(host, "(*.getpocket.com|getpocket.com)") || 
+        shExpMatch(host, "(*.cloudfront.net|cloudfront.net)") ||
+        shExpMatch(host, "(*.twitter.com|twitter.com)"))
+        return proxy_yes;
+ 
+// If the requested website is hosted within the internal network, send direct.
+    if (isPlainHostName(host) ||
+        shExpMatch(host, "*.local") ||
+        isInNet(dnsResolve(host), "10.0.0.0", "255.0.0.0") ||
+        isInNet(dnsResolve(host), "172.16.0.0",  "255.240.0.0") ||
+        isInNet(dnsResolve(host), "192.168.0.0",  "255.255.0.0") ||
+        isInNet(dnsResolve(host), "127.0.0.0", "255.255.255.0"))
+        return "DIRECT";
+ 
+// If the IP address of the local machine is within a defined
+// subnet, send to a specific proxy.
+//    if (isInNet(myIpAddress(), "10.66.0.0", "255.255.0.0"))
+//        { return "DIRECT"; }
+
+    if (shExpMatch(url, "http://google.com*"))  return proxy_yes;  
+    if (shExpMatch(url, "http://twitter.com*")) { return proxy_yes;  }
+    if (shExpMatch(url, "http://facebook.com*")) { return proxy_yes;  }
+    if (shExpMatch(url, "http://youtube.com*")) { return proxy_yes;  }
+ 
+// DEFAULT RULE: All other traffic, use below proxies, in fail-over order.
+    return proxy_no; proxy_yes;
+}
