@@ -71,3 +71,6 @@ git config --global alias.st status
 git config --global core.editor vim
 git config --global credential.helper store
 
+# upgrade system to new version
+dnf system-upgrade download --releasever=25
+dnf system-upgrade reboot
