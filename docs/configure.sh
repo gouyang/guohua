@@ -74,3 +74,8 @@ git config --global credential.helper store
 # upgrade system to new version
 dnf system-upgrade download --releasever=25
 dnf system-upgrade reboot
+
+# fix system-upgrade rpmfusion key issue
+sudo rpm --import 'https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-29'
+sudo rpm --import 'https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-29'
+
