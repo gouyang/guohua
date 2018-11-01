@@ -1,84 +1,86 @@
 ###########################
-The resume of Guohua Ouyang
+Guohua Ouyang
 ###########################
 
-Basic info
-==========
+Summary
+=======
 
-- mobile: 13522032627
-- email: ouyanggh0815@gmail.com
-- location: BeiJing, China
-- github: https://github.com/gouyang
-
-~~~~
-
-Overview
-========
-
-Senior software testing engineer in RedHat, work with a global team to test 
-container techlogies products like Atomic project, docker, kubernetes. 
-Over 10 years of professional experience in software testing. Excellent in
-problem solving. Experienced in Linux system and network management.
-Experienced in Python, Golang, Shell programming, markdown and rst.
-Experienced in HTML, CSS, Bootstrap.
+Senior quality engineer in Red Hat, work with a global team to test 
+container techlogy products like Atomic host, docker, kubernetes, kubevirt. 
+Over 10 years of professional experience in software testing. Good in solve
+technical issues. Experienced in linux, container, virtualiztion and DevOps.
+Experienced in network and storage. Have code ability in Python, Golang, Shell. 
+Be familiar with fullstack development.
 
 *Skills*
 --------
 
-- Linux: Fedora, RHEL, Gentoo, Arch, Debian, Kali, Ubuntu
-- Virtualization: Docker, oVirt/Rhev, vSphere
-- Network: CCNA & CCNP, TCP/IP
-- Programming language: Python, Golang, Bash, CSS, HTML
-- Framework: Django, Bootstrap, autotest,
-  Goblog_ (write from scratch by myself)
-- Tools: git, vim, sphinx, ansible
+- 10 years linux user
+- 8 years of experience in virtualization: RHEV/oVirt, VMware vSphere, KVM
+- 5 years of experience in container: Docker, kubernetes, kubevirt
+- Programming language: Python, Golang, Bash
+- Tools: ansible, git, vim, sphinx
 - Certificates: RHCE, CCNA
+- Bachelor of Communication Engineering, Wuhan University, 2014.
 
 ~~~~
 
 Experience
 ==========
 
-- Currently, QE at REDHAT
+- Currently, Senior Quality Engineer at Red Hat
 
-  Previous working on RHEV project
+  Kubevirt Porject
 
-  + Execute manual testing and report bug, tracking bug and response on time
+  + Automating test case from user story, trello card
+  + Contribute to kubevirt-ansible to deploy openshift cluster
+  + Write test plan and test case for developer review and finalize it
+  + Execute manual tests and automate tests
+  
+  Docker/kubernetes project
+
+  + Automating test case from trello card
+  + Contribute to container tools: buildah, skopeo
+  + Contributing to docker-autotest on github
+  + Owner auto test of fedora upstream package: buildah, skopeo
+  + Write auto test for docker, kubernetes, etcd, flannel and atomic cloud image
+  + Internal document review
+
+  RHEV project
+
+  + Execute manual tests and report bug, tracking bug and response on time
   + Define the goal for longeivty testing and setup environment to run, 
     analysis results and report  
   + Watching new feature on upstream, help community users
   + Work with international team to release product build
   + Work with parter/customer for bugs review and fix
-  + Maintain lab machine and server for daily wor
-  + Setup a variety of server for testing: private switch config, DNS server, 
-    file server, iSCSI and FC stoarge workstation
+  + Maintain lab machine and server for daily work
+  + Build up various server for team testing: private switch config, DNS server, 
+    file server, iSCSI and FC stoarge workstation, RHEVM server
   + Automated build download, pxe profile prepare and smoke testing, notify by
     email or fetion API
   + Lead the project testing when leader is on maternity leave
   + Contributed to oVirt upstream
   + Mentor new hire and junior
 
-  Now on Docker
-
-  + Execute manual testing for docker, atomic and kubernetes.
-  + Contributing to docker-autotest on github
-  + Review document before publish it.
-  + Deploy server by docker: Apache, gitlab
-  + Initialize the project to write team documents site by Docutils/reStructuredText
-
   Activities
 
-  + Attend oVirt workshop in Beijing 2012, presenting in Shanghai 2013
+  + Attend IDF 2012
+  + Attend oVirt workshop in Beijing 2012
+  + Speaker in oVirt workshop in Shanghai 2013
   + Redhat Volunteer at FUDCon Beijing 2014  
-  + OSTC 2014
-  + Presentations: oVirt overview, Docker overview, RHEL7 overview, VIM as
-    the Python IDE, Virtualenv, Linux tips(to make the life easy)
+  + Attend OSTC 2014
+  + Attend Docker 2014
+  + Attend Docker 2015
+  + Attend DevOps 2017
+  + Presentations in company: Kubernetes, oVirt, Docker, RHEL7 overview, VIM as
+    the Python IDE, Virtualenv, Linux tips
 
 ~~~~
 
-- 2009 - 2012 QE at VMware
+- 2009 - 2012 QE/Team Leader (Contractor) at VMware
 
-  Working on vSphere, testing View client on Windows, Linux and thinclient(HP,
+  Working on vSphere, testing View client on Windows, Linux and thinclient (HP,
   Wyse)
 
   + Work with Developer on initializing feature details
@@ -86,6 +88,8 @@ Experience
   + Execute test cases and report bugs. 
   + Setup vSphere environment for daily testing and keep updating them.
   + Maintain RSA Server to issue token for smartcard.  
+
+  Receive a reward from deverloper in US.
 
 ~~~~
 
@@ -116,13 +120,17 @@ Experience
 
 ~~~~
 
-*About Me*
-----------
+Education
+=========
 
-- Quality engineer with 10 years experience
-- Python and Golang lover
-- Love geek humor, music, tech blogs, and open source software
-- Live in ChangPing(BJ) with my wife and my little girl
+2000 - 2014: Communication Engineering, Wuhan University
+1997 - 2000: High school in HengYang, HuNan Prov.
 
+Contacts
+========
 
-.. _goblog: https://github.com/ouyanggh/goblog
+- mobile: 13522032627
+- email: guohuaouyang@gmail.com
+- location: BeiJing, China
+- github: https://github.com/gouyang
+- github.io: http://gouyang.github.io

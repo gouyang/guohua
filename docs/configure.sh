@@ -4,14 +4,14 @@ sudo dnf update -y
 sudo dnf install -y gcc awesome git ansible vim-enhanced vpnc thunderbird Zim stardict stardict-dic-zh_CN pidgin
 
 sudo pip install --upgrade pip
-sudo pip install vim-power
+pip install --user powerline-status
 
 mkdir -p $HOME/git $HOME/.config/awesome $HOME/.vim
 
 git clone https://github.com/gouyang/wm-awesome $HOME/.config/awesome
 git clone https://github.com/gouyang/guohua $HOME/git/guohua
 
-sudo cp HOME/git/guohua/repos/* /etc/yum.repos/
+sudo cp $HOME/git/guohua/repos/* /etc/yum.repos.d/
 sudo dnf install -y google-chrome-stable 
 
 cp ~/guohua/custom/bashrc ~/.bashrc
